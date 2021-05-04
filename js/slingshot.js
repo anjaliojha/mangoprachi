@@ -3,8 +3,8 @@ class Slingshot{
         var options = {
             bodyA: bodyA,
             pointB: pointB,
-            stiffness: 0.04,
-            length: 1
+            stiffness: 0.004,
+            length: 10
         }
         this.sling = Constraint.create(options);
         this.pointB=pointB;
@@ -19,14 +19,14 @@ class Slingshot{
         
     }
     display(){
-        if(this.sling.bodyA){
+        
         var pointA = this.sling.bodyA.position;
         var pointB = this.pointB;
         
         strokeWeight(4);
-        stroke("turquoise");
-        line(pointA.x, pointA.y, pointB.x, pointB.y);
-        }
+        stroke("black");
+       line(pointA.x,pointA.y,pointB.x,pointB.y);
+        
         }
     
 }

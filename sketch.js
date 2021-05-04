@@ -39,8 +39,9 @@ function setup() {
 
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
+
   //create launcherObject here
- //launchObj = new Slingshot( )
+ launchObj = new Slingshot(stoneObj.body,{x:240,y:430} )
 
 	Engine.run(engine);
 }
@@ -51,7 +52,7 @@ function draw() {
   textSize(25);
   text("Press Space to get a second Chance to Play!!",50 ,50);
   image(boy ,200,340,200,300);
-  
+  text(mouseX+","+mouseY,mouseX,mouseY);
 
   treeObj.display();
   stoneObj.display();
@@ -70,7 +71,7 @@ function draw() {
   stoneObj.display();
   groundObject.display();
   // display launcher object here
-    
+    launchObj.display();
 
 
   detectollision(stoneObj,mango1);
